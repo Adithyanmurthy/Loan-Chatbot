@@ -742,6 +742,20 @@ const combinedApp = express();
 combinedApp.use(cors());
 combinedApp.use(bodyParser.json());
 
+// Root route
+combinedApp.get('/', (req, res) => {
+    res.json({ 
+        status: 'running', 
+        service: 'AI Loan Chatbot - Mock APIs',
+        endpoints: {
+            health: '/health',
+            crm: '/crm/:userId',
+            creditScore: '/credit-score/:userId',
+            offers: '/offers/:userId'
+        }
+    });
+});
+
 // Health check for combined server
 combinedApp.get('/health', (req, res) => {
     res.json({ status: 'healthy', service: 'combined-mock-apis' });
