@@ -1,8 +1,4 @@
-# Render Blueprint - AI Loan Chatbot
-# Single click deployment - creates all services automatically
-
 services:
-  # Combined Mock APIs Server
   - type: web
     name: loan-chatbot-api
     runtime: node
@@ -15,7 +11,6 @@ services:
       - key: NODE_ENV
         value: production
 
-  # Python Backend
   - type: web
     name: loan-chatbot-backend
     runtime: python
@@ -31,22 +26,12 @@ services:
       - key: ALLOWED_ORIGINS
         value: "*"
       - key: CRM_API_URL
-        fromService:
-          name: loan-chatbot-api
-          type: web
-          property: hostport
+        value: https://loan-chatbot-api.onrender.com
       - key: CREDIT_BUREAU_API_URL
-        fromService:
-          name: loan-chatbot-api
-          type: web
-          property: hostport
+        value: https://loan-chatbot-api.onrender.com
       - key: OFFER_MART_API_URL
-        fromService:
-          name: loan-chatbot-api
-          type: web
-          property: hostport
+        value: https://loan-chatbot-api.onrender.com
 
-  # Frontend Static Site
   - type: web
     name: loan-chatbot-frontend
     runtime: static
@@ -55,17 +40,10 @@ services:
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: build
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
     envVars:
       - key: REACT_APP_API_URL
-        fromService:
-          name: loan-chatbot-backend
-          type: web
-          property: hostport
+        value: https://loan-chatbot-backend.onrender.com
