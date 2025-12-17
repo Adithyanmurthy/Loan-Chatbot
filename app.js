@@ -93,13 +93,29 @@ app.post('/api/chat/message', (req, res) => {
     const msgLower = (message || '').toLowerCase();
     
     // Initial greeting
-    if (state.stage === 'initiation' && (msgLower.includes('loan') || msgLower.includes('apply') || msgLower.includes('need'))) {
+    if (state.stage === 'initiation' && (msgLower.includes('loan') || msgLower.includes('apply') || msgLower.includes('need') || msgLower.includes('hi') || msgLower.includes('hello'))) {
         response.message = "I'd be happy to help you with a personal loan! Please fill out the form below:";
         response.messageType = 'form';
         response.agentType = 'sales';
         response.metadata = {
             form_data: {
-                fields: ['full_name', 'phone', 'city', 'age', 'monthly_salary', 'loan_amount', 'employment_type']
+                form_type: 'customer_info',
+                title: 'Personal Loan Application',
+                description: 'Please provide your details to get personalized loan options',
+                submit_text: 'Get Loan Options',
+                fields: [
+                    { name: 'full_name', label: 'Full Name', type: 'text', required: true, placeholder: 'Enter your full name' },
+                    { name: 'phone', label: 'Mobile Number', type: 'tel', required: true, placeholder: '10-digit mobile number' },
+                    { name: 'city', label: 'City', type: 'text', required: true, placeholder: 'Your city' },
+                    { name: 'age', label: 'Age', type: 'number', required: true, placeholder: 'Your age', min: 21, max: 65 },
+                    { name: 'monthly_salary', label: 'Monthly Salary (₹)', type: 'number', required: true, placeholder: 'e.g. 50000', min: 15000 },
+                    { name: 'loan_amount', label: 'Loan Amount Required (₹)', type: 'number', required: true, placeholder: 'e.g. 500000', min: 50000, max: 5000000 },
+                    { name: 'employment_type', label: 'Employment Type', type: 'select', required: true, options: [
+                        { value: 'salaried', label: 'Salaried' },
+                        { value: 'self_employed', label: 'Self Employed' },
+                        { value: 'business', label: 'Business Owner' }
+                    ]}
+                ]
             }
         };
         return res.json(response);
