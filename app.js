@@ -138,8 +138,41 @@ app.post('/api/chat/message', (req, res) => {
         return res.json(response);
     }
     
+    // Generate sanction letter - CHECK THIS FIRST (before approval check)
+    if (state.stage === 'approved' && (msgLower.includes('sanction') || msgLower.includes('letter') || msgLower.includes('generate'))) {
+        const amount = state.customerData?.loanAmount || 500000;
+        const name = state.customerData?.name || 'Customer';
+        const letterId = `SL_${Date.now()}`;
+        const emi = Math.round(amount * 0.0222);
+        
+        sanctionLetters.push({
+            id: letterId,
+            customer_name: name,
+            loan_amount: amount,
+            tenure: 60,
+            interest_rate: 12.0,
+            emi: emi,
+            filename: `sanction_letter_${letterId}.pdf`,
+            download_url: `/api/download/sanction-letter/${letterId}`,
+            generated_at: new Date().toISOString(),
+            downloaded_count: 0
+        });
+        
+        state.stage = 'completed';
+        
+        response.message = `📄 **Sanction Letter Generated Successfully!**\n\n**Loan Details:**\n• Customer: ${name}\n• Amount: ₹${amount.toLocaleString()}\n• Tenure: 60 months\n• Interest Rate: 12% p.a.\n• Monthly EMI: ₹${emi.toLocaleString()}\n\n✅ Your application has been saved to history.\n\nThank you for choosing us! 🎉`;
+        response.messageType = 'download_link';
+        response.agentType = 'sanction';
+        response.metadata = {
+            download_url: `/api/download/sanction-letter/${letterId}`,
+            filename: `sanction_letter_${letterId}.pdf`,
+            letter_id: letterId
+        };
+        return res.json(response);
+    }
+    
     // Loan approval
-    if (msgLower.includes('approval') || msgLower.includes('approve')) {
+    if (state.stage !== 'approved' && (msgLower.includes('approval') || msgLower.includes('approve') || msgLower.includes('eligibility'))) {
         state.stage = 'approved';
         const amount = state.customerData?.loanAmount || 500000;
         
@@ -149,6 +182,10 @@ app.post('/api/chat/message', (req, res) => {
             id: appId,
             customer_name: state.customerData?.name || 'Customer',
             requested_amount: amount,
+            approved_amount: amount,
+            tenure: 60,
+            interest_rate: 12.0,
+            emi: Math.round(amount * 0.0222),
             status: 'approved',
             created_at: new Date().toISOString()
         });
@@ -158,33 +195,72 @@ app.post('/api/chat/message', (req, res) => {
         return res.json(response);
     }
     
-    // Generate sanction letter
-    if (msgLower.includes('sanction') || msgLower.includes('letter') || msgLower.includes('generate')) {
-        const amount = state.customerData?.loanAmount || 500000;
-        const name = state.customerData?.name || 'Customer';
-        const letterId = `SL_${Date.now()}`;
-        
-        sanctionLetters.push({
-            id: letterId,
-            customer_name: name,
-            loan_amount: amount,
-            tenure: 60,
-            interest_rate: 12.0,
-            emi: Math.round(amount * 0.0222),
-            generated_at: new Date().toISOString(),
-            downloaded_count: 0
-        });
-        
-        response.message = `📄 **Sanction Letter Generated!**\n\n**Loan Details:**\n• Amount: ₹${amount.toLocaleString()}\n• Tenure: 60 months\n• EMI: ₹${Math.round(amount * 0.0222).toLocaleString()}\n\nYour application has been saved to history.\n\n[VIEW_HISTORY]`;
-        response.messageType = 'text';
-        response.agentType = 'sanction';
-        return res.json(response);
-    }
-    
     // Default response
     response.message = "Hello! I'm your AI Loan Assistant. Say 'I need a loan' to get started!";
     response.agentType = 'master';
     res.json(response);
+});
+
+// ============== DOWNLOAD API ==============
+app.get('/api/download/sanction-letter/:letterId', (req, res) => {
+    const letter = sanctionLetters.find(l => l.id === req.params.letterId);
+    if (!letter) {
+        return res.status(404).json({ error: 'Sanction letter not found' });
+    }
+    
+    // Generate a simple text-based sanction letter (in production, use PDF library)
+    const content = `
+================================================================================
+                           TATA CAPITAL LIMITED
+                         LOAN SANCTION LETTER
+================================================================================
+
+Date: ${new Date().toLocaleDateString('en-IN')}
+Reference No: ${letter.id}
+
+Dear ${letter.customer_name},
+
+We are pleased to inform you that your Personal Loan application has been 
+APPROVED with the following terms and conditions:
+
+--------------------------------------------------------------------------------
+                              LOAN DETAILS
+--------------------------------------------------------------------------------
+
+Loan Amount Sanctioned    : ₹ ${letter.loan_amount.toLocaleString('en-IN')}
+Loan Tenure               : ${letter.tenure} months
+Rate of Interest          : ${letter.interest_rate}% per annum
+Monthly EMI               : ₹ ${letter.emi.toLocaleString('en-IN')}
+Processing Fee            : ₹ ${Math.round(letter.loan_amount * 0.01).toLocaleString('en-IN')}
+
+--------------------------------------------------------------------------------
+                           TERMS & CONDITIONS
+--------------------------------------------------------------------------------
+
+1. This sanction is valid for 30 days from the date of issue.
+2. The loan is subject to completion of all documentation.
+3. EMI will be debited from your registered bank account.
+4. Prepayment charges may apply as per bank policy.
+
+--------------------------------------------------------------------------------
+
+For any queries, please contact our customer support:
+📞 1800-209-8800 (Toll Free)
+📧 support@tatacapital.com
+
+Thank you for choosing Tata Capital!
+
+================================================================================
+                    This is a system generated document
+================================================================================
+`;
+
+    // Increment download count
+    letter.downloaded_count++;
+    
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Disposition', `attachment; filename="sanction_letter_${letter.id}.txt"`);
+    res.send(content);
 });
 
 // ============== HISTORY API ==============
