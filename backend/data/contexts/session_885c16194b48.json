@@ -1,0 +1,21 @@
+{
+  "session_id": "session_885c16194b48",
+  "customer_id": "CUST002",
+  "current_agent": "master",
+  "conversation_stage": "initiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T12:55:28.637260",
+        "customer_id": "CUST002",
+        "initial_message": "Hello",
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm here to help you find the perfect loan solution. How can I assist you today?"
+      },
+      "timestamp": "2025-12-15T12:55:28.637260"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "last_updated": "2025-12-15T12:55:28.637260"
+}

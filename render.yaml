@@ -1,0 +1,56 @@
+# Render Blueprint for AI Loan Chatbot
+# Deploy all services with a single click
+
+services:
+  # Backend API Service (Python Flask)
+  - type: web
+    name: loan-chatbot-backend
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CRM_API_URL
+        sync: false
+      - key: CREDIT_BUREAU_API_URL
+        sync: false
+      - key: OFFER_MART_API_URL
+        sync: false
+    healthCheckPath: /api/health
+
+  # Mock APIs Service (Node.js)
+  - type: web
+    name: loan-chatbot-mock-apis
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: mock-apis
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health
+
+  # Frontend Static Site (React)
+  - type: web
+    name: loan-chatbot-frontend
+    runtime: static
+    region: oregon
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

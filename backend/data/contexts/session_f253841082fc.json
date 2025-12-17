@@ -1,0 +1,91 @@
+{
+  "session_id": "session_f253841082fc",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "information_collection",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-14T21:52:17.754558",
+        "customer_id": null,
+        "initial_message": null,
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process."
+      },
+      "timestamp": "2025-12-14T21:52:17.754558"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-14T21:52:17.755566"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process.",
+      "timestamp": "2025-12-14T21:52:17.755566"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-14T21:52:17.755566"
+    },
+    "initial_message": {
+      "value": null,
+      "timestamp": "2025-12-14T21:52:17.755566"
+    },
+    "user_message": {
+      "value": "I'm interested in a personal loan of 5 lakhs",
+      "timestamp": "2025-12-14T21:52:17.756558"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-14T21:52:17.756558"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "loan_interest",
+        "confidence": 0.8,
+        "all_intents": [
+          "loan_interest"
+        ],
+        "message_length": 44,
+        "context_stage": "initiation"
+      },
+      "timestamp": "2025-12-14T21:52:17.756558"
+    },
+    "message_timestamp": {
+      "value": "2025-12-14T21:52:17.756558",
+      "timestamp": "2025-12-14T21:52:17.756558"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "initiation",
+        "to_stage": "information_collection",
+        "transition_time": "2025-12-14T21:52:17.757562",
+        "transition_data": {
+          "action": "collect_information",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Collecting basic customer information",
+            "next_stages": [
+              "sales_negotiation",
+              "error_handling"
+            ],
+            "required_data": [
+              "name",
+              "age",
+              "city",
+              "loan_amount"
+            ],
+            "timeout_minutes": 10
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-14T21:52:17.757562"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "last_updated": "2025-12-14T21:52:17.757562"
+}

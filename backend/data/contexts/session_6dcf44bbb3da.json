@@ -1,0 +1,129 @@
+{
+  "session_id": "session_6dcf44bbb3da",
+  "customer_id": null,
+  "current_agent": "underwriting",
+  "conversation_stage": "underwriting",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T15:37:00.646400",
+        "customer_id": null,
+        "initial_message": "Hello, I need a loan",
+        "greeting_sent": "Hi there! Thanks for visiting us today. I'm here to make your loan application process as smooth and quick as possible. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-15T15:37:00.646400"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T15:37:00.647328"
+    },
+    "greeting_sent": {
+      "value": "Hi there! Thanks for visiting us today. I'm here to make your loan application process as smooth and quick as possible. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-15T15:37:00.647328"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-15T15:37:00.647328"
+    },
+    "initial_message": {
+      "value": "Hello, I need a loan",
+      "timestamp": "2025-12-15T15:37:00.647328"
+    },
+    "user_message": {
+      "value": "My name is John Doe, I am 35 years old, and I work as a Software Engineer.",
+      "timestamp": "2025-12-15T15:37:02.695084"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T15:37:02.695084"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "comprehensive_loan_application",
+        "confidence": 0.9,
+        "all_intents": [
+          "comprehensive_loan_application",
+          "customer_details",
+          "loan_interest"
+        ],
+        "message_length": 74,
+        "context_stage": "information_collection",
+        "application_completeness": 0.6666666666666666
+      },
+      "timestamp": "2025-12-15T15:37:02.695084"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T15:37:02.695084",
+      "timestamp": "2025-12-15T15:37:02.695084"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "information_collection",
+        "to_stage": "underwriting",
+        "transition_time": "2025-12-15T15:37:02.695084",
+        "transition_data": {
+          "action": "process_complete_application",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Credit assessment and loan approval decision",
+            "next_stages": [
+              "sanction_generation",
+              "document_upload",
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "credit_score",
+              "eligibility_decision"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T15:37:02.695084"
+    },
+    "customer_profile": {
+      "value": {
+        "id": "GUEST_USER",
+        "name": "Is John Doe",
+        "age": 30,
+        "city": "Bangalore",
+        "phone": "9876543210",
+        "address": "Bangalore, Karnataka",
+        "current_loans": [],
+        "credit_score": 750,
+        "pre_approved_limit": 500000,
+        "employment_type": "salaried",
+        "salary": 60000,
+        "requested_amount": 300000
+      },
+      "timestamp": "2025-12-15T15:37:02.697075"
+    },
+    "loan_approved": {
+      "value": true,
+      "timestamp": "2025-12-15T15:37:03.702924"
+    },
+    "approved_loan": {
+      "value": {
+        "amount": 300000,
+        "tenure": 60,
+        "interest_rate": 12.0,
+        "emi": 6000.0,
+        "credit_score": 740
+      },
+      "timestamp": "2025-12-15T15:37:03.702924"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_1261e0e7"
+  ],
+  "errors": [],
+  "created_at": "2025-12-15 15:37:00.640689",
+  "updated_at": "2025-12-15 15:37:03.703942",
+  "last_updated": "2025-12-15T15:37:03.704984"
+}

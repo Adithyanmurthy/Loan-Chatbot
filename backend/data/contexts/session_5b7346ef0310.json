@@ -1,0 +1,92 @@
+{
+  "session_id": "session_5b7346ef0310",
+  "customer_id": "CUST001",
+  "current_agent": "sales",
+  "conversation_stage": "sales_negotiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T13:28:15.662210",
+        "customer_id": "CUST001",
+        "initial_message": "Hello",
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm here to help you find the perfect loan solution. How can I assist you today?"
+      },
+      "timestamp": "2025-12-15T13:28:15.662210"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T13:28:15.665355"
+    },
+    "greeting_sent": {
+      "value": "Hello! Welcome to our personal loan service. I'm here to help you find the perfect loan solution. How can I assist you today?",
+      "timestamp": "2025-12-15T13:28:15.665355"
+    },
+    "customer_id": {
+      "value": "CUST001",
+      "timestamp": "2025-12-15T13:28:15.665355"
+    },
+    "initial_message": {
+      "value": "Hello",
+      "timestamp": "2025-12-15T13:28:15.665355"
+    },
+    "user_message": {
+      "value": "Please proceed with verification",
+      "timestamp": "2025-12-15T13:28:19.250226"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T13:28:19.250226"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "agreement",
+        "confidence": 0.8,
+        "all_intents": [
+          "agreement"
+        ],
+        "message_length": 32,
+        "context_stage": "information_collection"
+      },
+      "timestamp": "2025-12-15T13:28:19.250226"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T13:28:19.250226",
+      "timestamp": "2025-12-15T13:28:19.250226"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "information_collection",
+        "to_stage": "sales_negotiation",
+        "transition_time": "2025-12-15T13:28:19.250226",
+        "transition_data": {
+          "action": "start_sales",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Negotiating loan terms and conditions",
+            "next_stages": [
+              "verification",
+              "error_handling"
+            ],
+            "required_data": [
+              "agreed_amount",
+              "agreed_tenure",
+              "agreed_rate"
+            ],
+            "timeout_minutes": 15
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T13:28:19.250226"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "created_at": "2025-12-15 13:28:15.653211",
+  "updated_at": "2025-12-15 13:28:19.250226",
+  "last_updated": "2025-12-15T13:28:19.250226"
+}

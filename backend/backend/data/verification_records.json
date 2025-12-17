@@ -1,0 +1,52 @@
+{
+  "CUST001_test_session_001": {
+    "customer_id": "CUST001",
+    "session_id": "test_session_001",
+    "status": "verified",
+    "method": "automatic_crm",
+    "started_at": "2025-12-14T22:17:15.535830",
+    "completed_at": "2025-12-14T22:17:15.557099",
+    "expires_at": "2026-01-13T22:17:15.557099",
+    "verification_score": 100,
+    "issues": [],
+    "verified_fields": [
+      "phone",
+      "address",
+      "personal_details"
+    ],
+    "required_documents": [],
+    "attempts": 0,
+    "last_attempt_at": "2025-12-14T22:17:15.557099",
+    "metadata": {
+      "phone_verified": true,
+      "address_verified": true,
+      "personal_verified": true,
+      "crm_response_time": 0.018305301666259766
+    }
+  },
+  "CUST001_test_session": {
+    "customer_id": "CUST001",
+    "session_id": "test_session",
+    "status": "verified",
+    "method": "automatic_crm",
+    "started_at": "2025-12-14T22:17:50.773130",
+    "completed_at": "2025-12-14T22:17:50.793808",
+    "expires_at": "2026-01-13T22:17:50.793808",
+    "verification_score": 100,
+    "issues": [],
+    "verified_fields": [
+      "phone",
+      "address",
+      "personal_details"
+    ],
+    "required_documents": [],
+    "attempts": 0,
+    "last_attempt_at": "2025-12-14T22:17:50.793808",
+    "metadata": {
+      "phone_verified": true,
+      "address_verified": true,
+      "personal_verified": true,
+      "crm_response_time": 0.018624305725097656
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "session_id": "session_b3f961a1ca2e",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "initiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T13:51:10.455976",
+        "customer_id": null,
+        "initial_message": "name: Ajay Kumar T N\n age: 25 \ncity: bangalore \nloan amount: 100000\"",
+        "greeting_sent": "Hi there! Thanks for visiting us today. I'm here to make your loan application process as smooth and quick as possible. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-15T13:51:10.455976"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "created_at": "2025-12-15 13:51:10.441500",
+  "updated_at": "2025-12-15 13:51:10.441500",
+  "last_updated": "2025-12-15T13:51:10.457070"
+}

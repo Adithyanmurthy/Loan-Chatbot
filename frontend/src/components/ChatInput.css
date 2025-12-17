@@ -1,0 +1,129 @@
+.chat-input-container {
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  padding: 1rem;
+}
+
+.chat-input-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 24px;
+  padding: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.input-group:focus-within {
+  border-color: #667eea;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 0.5rem;
+  min-height: 20px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.message-input::placeholder {
+  color: #999;
+}
+
+.message-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.file-upload-button,
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.1rem;
+}
+
+.file-upload-button {
+  background: #6c757d;
+  color: white;
+}
+
+.file-upload-button:hover:not(:disabled) {
+  background: #5a6268;
+  transform: scale(1.05);
+}
+
+.send-button {
+  background: #667eea;
+  color: white;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #5a67d8;
+  transform: scale(1.05);
+}
+
+.send-button:disabled,
+.file-upload-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Auto-resize textarea */
+.message-input {
+  field-sizing: content;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chat-input-container {
+    padding: 0.75rem;
+  }
+  
+  .input-group {
+    padding: 0.4rem;
+  }
+  
+  .message-input {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  
+  .file-upload-button,
+  .send-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .input-hint {
+    font-size: 0.7rem;
+  }
+}

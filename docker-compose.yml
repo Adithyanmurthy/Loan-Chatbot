@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+  backend:
+    build: ./frontend
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - CRM_API_URL=http://mock-apis:3001
+      - CREDIT_BUREAU_API_URL=http://mock-apis:3002
+      - OFFER_MART_API_URL=http://mock-apis:3003
+    depends_on:
+      - mock-apis
+    volumes:
+      - ./backend:/app
+
+  mock-apis:
+    build: ./mock-apis
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+      - "3003:3003"
+    volumes:
+      - ./mock-apis:/app
+      - /app/node_modules

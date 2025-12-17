@@ -1,0 +1,115 @@
+{
+  "session_id": "session_44caf0686369",
+  "customer_id": null,
+  "current_agent": "underwriting",
+  "conversation_stage": "underwriting",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T15:30:29.106708",
+        "customer_id": null,
+        "initial_message": "I want to apply for a personal loan. Here are my details:\n    \n    Name: John Doe\n    Age: 35\n    Monthly Income: \u20b980,000\n    Employment: Software Engineer at TechCorp (5 years)\n    Credit Score: 750\n    Loan Amount Required: \u20b95,00,000\n    Purpose: Home renovation\n    \n    Please process my application and provide the sanction letter if approved.",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-15T15:30:29.106708"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T15:30:29.109709"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-15T15:30:29.109709"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-15T15:30:29.109709"
+    },
+    "initial_message": {
+      "value": "I want to apply for a personal loan. Here are my details:\n    \n    Name: John Doe\n    Age: 35\n    Monthly Income: \u20b980,000\n    Employment: Software Engineer at TechCorp (5 years)\n    Credit Score: 750\n    Loan Amount Required: \u20b95,00,000\n    Purpose: Home renovation\n    \n    Please process my application and provide the sanction letter if approved.",
+      "timestamp": "2025-12-15T15:30:29.109709"
+    },
+    "user_message": {
+      "value": "I want to apply for a personal loan. Here are my details:\n    \n    Name: John Doe\n    Age: 35\n    Monthly Income: \u20b980,000\n    Employment: Software Engineer at TechCorp (5 years)\n    Credit Score: 750\n    Loan Amount Required: \u20b95,00,000\n    Purpose: Home renovation\n    \n    Please process my application and provide the sanction letter if approved.",
+      "timestamp": "2025-12-15T15:30:29.110707"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T15:30:29.110707"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "comprehensive_loan_application",
+        "confidence": 0.9,
+        "all_intents": [
+          "comprehensive_loan_application",
+          "customer_details",
+          "loan_interest"
+        ],
+        "message_length": 348,
+        "context_stage": "initiation",
+        "application_completeness": 1.0
+      },
+      "timestamp": "2025-12-15T15:30:29.110707"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T15:30:29.110707",
+      "timestamp": "2025-12-15T15:30:29.110707"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "initiation",
+        "to_stage": "underwriting",
+        "transition_time": "2025-12-15T15:30:29.111706",
+        "transition_data": {
+          "action": "process_complete_application",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Credit assessment and loan approval decision",
+            "next_stages": [
+              "sanction_generation",
+              "document_upload",
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "credit_score",
+              "eligibility_decision"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T15:30:29.111706"
+    },
+    "customer_profile": {
+      "value": {
+        "id": "GUEST_USER",
+        "name": "John Doe",
+        "age": 35,
+        "city": "Bangalore",
+        "phone": "9876543210",
+        "address": "Bangalore, Karnataka",
+        "current_loans": [],
+        "credit_score": 750,
+        "pre_approved_limit": 500000,
+        "employment_type": "salaried",
+        "salary": 80000,
+        "requested_amount": 80000
+      },
+      "timestamp": "2025-12-15T15:30:29.117849"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_59fa7bcf"
+  ],
+  "errors": [],
+  "created_at": "2025-12-15 15:30:29.096549",
+  "updated_at": "2025-12-15 15:30:30.136635",
+  "last_updated": "2025-12-15T15:30:30.137655"
+}

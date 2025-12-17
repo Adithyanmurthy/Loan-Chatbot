@@ -1,0 +1,224 @@
+{
+  "session_id": "session_6e63ffb98f1b",
+  "customer_id": null,
+  "current_agent": "sanction",
+  "conversation_stage": "sanction_generation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T15:37:44.228336",
+        "customer_id": null,
+        "initial_message": "hi",
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm your AI assistant, and I'm here to help you find the perfect loan solution tailored to your needs. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process."
+      },
+      "timestamp": "2025-12-15T15:37:44.228336"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T15:37:44.230314"
+    },
+    "greeting_sent": {
+      "value": "Hello! Welcome to our personal loan service. I'm your AI assistant, and I'm here to help you find the perfect loan solution tailored to your needs. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process.",
+      "timestamp": "2025-12-15T15:37:44.230314"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-15T15:37:44.230314"
+    },
+    "initial_message": {
+      "value": "hi",
+      "timestamp": "2025-12-15T15:37:44.230314"
+    },
+    "user_message": {
+      "value": "continue",
+      "timestamp": "2025-12-15T15:38:26.443427"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T15:38:26.443427"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "agreement",
+        "confidence": 0.8,
+        "all_intents": [
+          "agreement"
+        ],
+        "message_length": 8,
+        "context_stage": "underwriting"
+      },
+      "timestamp": "2025-12-15T15:38:26.443427"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T15:38:26.443427",
+      "timestamp": "2025-12-15T15:38:26.443427"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "underwriting",
+        "to_stage": "sanction_generation",
+        "transition_time": "2025-12-15T15:38:26.443427",
+        "transition_data": {
+          "action": "generate_sanction_letter",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Generating loan sanction letter",
+            "next_stages": [
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "sanction_letter_generated"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T15:38:26.443427"
+    },
+    "form_data": {
+      "value": {
+        "form_type": "customer_information",
+        "form_data": {
+          "full_name": "Ajay Kumar T N",
+          "age": "28",
+          "city": "Bangalore",
+          "phone": "8861158912",
+          "loan_amount": "50000",
+          "monthly_salary": "15000",
+          "employment_type": "self_employed"
+        },
+        "timestamp": "2025-12-15T10:08:11.860Z"
+      },
+      "timestamp": "2025-12-15T15:38:12.188006"
+    },
+    "shared_master_to_sales_customer_profile": {
+      "value": {
+        "value": {
+          "id": "GUEST_USER",
+          "name": "Valued Customer",
+          "age": 25,
+          "city": "Bangalore",
+          "phone": "9876543210",
+          "address": "Bangalore, Karnataka",
+          "current_loans": [],
+          "credit_score": 750,
+          "pre_approved_limit": 500000,
+          "employment_type": "salaried",
+          "salary": 50000,
+          "requested_amount": 100000
+        },
+        "source_agent": "master",
+        "target_agent": "sales",
+        "shared_at": "2025-12-15T15:38:12.197928"
+      },
+      "timestamp": "2025-12-15T15:38:12.197928"
+    },
+    "loan_options": {
+      "value": [
+        {
+          "amount": 100000,
+          "tenure": 6,
+          "interest_rate": 12.0,
+          "emi": 17254.84,
+          "total_payable": 103529.04000000001,
+          "processing_fee": 2000.0,
+          "affordability_score": 70.0,
+          "is_affordable": true,
+          "risk_level": "medium"
+        },
+        {
+          "amount": 100000,
+          "tenure": 12,
+          "interest_rate": 12.0,
+          "emi": 8884.88,
+          "total_payable": 106618.56,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        },
+        {
+          "amount": 100000,
+          "tenure": 18,
+          "interest_rate": 12.0,
+          "emi": 6098.2,
+          "total_payable": 109767.59999999999,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        }
+      ],
+      "timestamp": "2025-12-15T15:38:12.224816"
+    },
+    "capacity_assessment": {
+      "value": {
+        "customer_id": "GUEST_USER",
+        "requested_amount": 100000,
+        "pre_approved_limit": 500000.0,
+        "credit_score": 750,
+        "current_debt_ratio": 0.0,
+        "available_income": 50000.0,
+        "assessment_timestamp": "2025-12-15T15:38:12.222825",
+        "amount_to_limit_ratio": 0.2,
+        "within_pre_approved": true,
+        "within_2x_limit": true,
+        "capacity_level": "excellent",
+        "recommended_amount": 1000000.0,
+        "available_emi_capacity": 25000.0
+      },
+      "timestamp": "2025-12-15T15:38:12.224816"
+    },
+    "negotiation_stage": {
+      "value": "terms_presented",
+      "timestamp": "2025-12-15T15:38:12.225948"
+    },
+    "kyc_verified": {
+      "value": true,
+      "timestamp": "2025-12-15T15:38:14.977303"
+    },
+    "verification_score": {
+      "value": 90,
+      "timestamp": "2025-12-15T15:38:14.977303"
+    },
+    "verification_details": {
+      "value": {
+        "verification_successful": true,
+        "verification_score": 90,
+        "customer_id": "GUEST_USER",
+        "verified_fields": [
+          "name",
+          "phone",
+          "address",
+          "identity"
+        ],
+        "verification_details": {
+          "name_match": "Verified \u2705",
+          "phone_match": "Verified \u2705",
+          "address_match": "Verified \u2705",
+          "identity_check": "Passed \u2705",
+          "risk_assessment": "Low Risk",
+          "verification_method": "Automated KYC"
+        },
+        "next_action": "proceed_to_underwriting",
+        "message": "\ud83c\udf89 **Verification Successful!**\n\n**Verification Results:**\n\u2705 **Name**: Valued Customer - Verified\n\u2705 **Phone**: 9876543210 - Verified  \n\u2705 **Address**: Bangalore, India - Verified\n\u2705 **Identity Check**: Passed\n\u2705 **Risk Assessment**: Low Risk\n\n**Verification Score**: 90/100\n\nGreat news! All your details have been successfully verified. We can now proceed with the loan approval process."
+      },
+      "timestamp": "2025-12-15T15:38:14.977303"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_21f1920d",
+    "task_3451a14c",
+    "task_d045bbbe"
+  ],
+  "errors": [],
+  "created_at": "2025-12-15 15:37:44.224205",
+  "updated_at": "2025-12-15 15:38:26.443427",
+  "last_updated": "2025-12-15T15:38:26.444423"
+}

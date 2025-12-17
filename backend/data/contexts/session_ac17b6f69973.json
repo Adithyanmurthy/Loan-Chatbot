@@ -1,0 +1,21 @@
+{
+  "session_id": "session_ac17b6f69973",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "initiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-14T21:52:17.727766",
+        "customer_id": null,
+        "initial_message": null,
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm your AI assistant, and I'm here to help you find the perfect loan solution tailored to your needs. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process."
+      },
+      "timestamp": "2025-12-14T21:52:17.727766"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "last_updated": "2025-12-14T21:52:17.727766"
+}

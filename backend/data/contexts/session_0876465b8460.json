@@ -1,0 +1,92 @@
+{
+  "session_id": "session_0876465b8460",
+  "customer_id": "CUST002",
+  "current_agent": "verification",
+  "conversation_stage": "verification",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T13:28:15.429050",
+        "customer_id": "CUST002",
+        "initial_message": "Hello",
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm here to help you find the perfect loan solution. How can I assist you today?"
+      },
+      "timestamp": "2025-12-15T13:28:15.429050"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T13:28:15.433761"
+    },
+    "greeting_sent": {
+      "value": "Hello! Welcome to our personal loan service. I'm here to help you find the perfect loan solution. How can I assist you today?",
+      "timestamp": "2025-12-15T13:28:15.433761"
+    },
+    "customer_id": {
+      "value": "CUST002",
+      "timestamp": "2025-12-15T13:28:15.433761"
+    },
+    "initial_message": {
+      "value": "Hello",
+      "timestamp": "2025-12-15T13:28:15.433761"
+    },
+    "user_message": {
+      "value": "Yes, please verify my details",
+      "timestamp": "2025-12-15T13:28:23.100364"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T13:28:23.100364"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "agreement",
+        "confidence": 0.8,
+        "all_intents": [
+          "agreement"
+        ],
+        "message_length": 29,
+        "context_stage": "sales_negotiation"
+      },
+      "timestamp": "2025-12-15T13:28:23.100364"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T13:28:23.100364",
+      "timestamp": "2025-12-15T13:28:23.100364"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "sales_negotiation",
+        "to_stage": "verification",
+        "transition_time": "2025-12-15T13:28:23.100364",
+        "transition_data": {
+          "action": "start_verification",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Verifying customer identity and details",
+            "next_stages": [
+              "underwriting",
+              "error_handling"
+            ],
+            "required_data": [
+              "kyc_verified",
+              "phone_verified",
+              "address_verified"
+            ],
+            "timeout_minutes": 10
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T13:28:23.100364"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "created_at": "2025-12-15 13:28:15.417776",
+  "updated_at": "2025-12-15 13:28:23.100364",
+  "last_updated": "2025-12-15T13:28:23.100364"
+}

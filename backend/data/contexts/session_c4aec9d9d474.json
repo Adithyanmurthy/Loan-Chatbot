@@ -1,0 +1,195 @@
+{
+  "session_id": "session_c4aec9d9d474",
+  "customer_id": null,
+  "current_agent": "underwriting",
+  "conversation_stage": "underwriting",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-16T12:46:40.176230",
+        "customer_id": null,
+        "initial_message": "loan for 5lakhs",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-16T12:46:40.176241"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-16T12:46:40.176745"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-16T12:46:40.176749"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-16T12:46:40.176751"
+    },
+    "initial_message": {
+      "value": "loan for 5lakhs",
+      "timestamp": "2025-12-16T12:46:40.176753"
+    },
+    "user_message": {
+      "value": "KYC verification complete. I agree to proceed with the loan. Please check my credit score and approve my loan application.",
+      "timestamp": "2025-12-16T12:48:12.487077"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-16T12:48:12.487083"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "verification_complete",
+        "confidence": 0.95,
+        "all_intents": [
+          "verification_complete",
+          "agreement"
+        ],
+        "message_length": 122,
+        "context_stage": "sales_negotiation"
+      },
+      "timestamp": "2025-12-16T12:48:12.487087"
+    },
+    "message_timestamp": {
+      "value": "2025-12-16T12:48:12.487053",
+      "timestamp": "2025-12-16T12:48:12.487091"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "sales_negotiation",
+        "to_stage": "underwriting",
+        "transition_time": "2025-12-16T12:48:12.487321",
+        "transition_data": {
+          "action": "start_underwriting",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Credit assessment and loan approval decision",
+            "next_stages": [
+              "sanction_generation",
+              "document_upload",
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "credit_score",
+              "eligibility_decision"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-16T12:48:12.487326"
+    },
+    "form_data": {
+      "value": {
+        "form_type": "customer_information",
+        "form_data": {
+          "full_name": "asd",
+          "age": "31",
+          "city": "indore",
+          "phone": "9191919191",
+          "loan_amount": "500000",
+          "monthly_salary": "78000",
+          "employment_type": "salaried"
+        },
+        "timestamp": "2025-12-16T07:17:21.337Z"
+      },
+      "timestamp": "2025-12-16T12:47:21.372728"
+    },
+    "shared_master_to_sales_customer_profile": {
+      "value": {
+        "value": {
+          "id": "GUEST_USER",
+          "name": "Valued Customer",
+          "age": 25,
+          "city": "Bangalore",
+          "phone": "9876543210",
+          "address": "Bangalore, Karnataka",
+          "current_loans": [],
+          "credit_score": 750,
+          "pre_approved_limit": 500000,
+          "employment_type": "salaried",
+          "salary": 50000,
+          "requested_amount": 100000
+        },
+        "source_agent": "master",
+        "target_agent": "sales",
+        "shared_at": "2025-12-16T12:47:21.377258"
+      },
+      "timestamp": "2025-12-16T12:47:21.377263"
+    },
+    "loan_options": {
+      "value": [
+        {
+          "amount": 100000,
+          "tenure": 6,
+          "interest_rate": 12.0,
+          "emi": 17254.84,
+          "total_payable": 103529.04000000001,
+          "processing_fee": 2000.0,
+          "affordability_score": 70.0,
+          "is_affordable": true,
+          "risk_level": "medium"
+        },
+        {
+          "amount": 100000,
+          "tenure": 12,
+          "interest_rate": 12.0,
+          "emi": 8884.88,
+          "total_payable": 106618.56,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        },
+        {
+          "amount": 100000,
+          "tenure": 18,
+          "interest_rate": 12.0,
+          "emi": 6098.2,
+          "total_payable": 109767.59999999999,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        }
+      ],
+      "timestamp": "2025-12-16T12:47:21.394195"
+    },
+    "capacity_assessment": {
+      "value": {
+        "customer_id": "GUEST_USER",
+        "requested_amount": 100000,
+        "pre_approved_limit": 500000.0,
+        "credit_score": 750,
+        "current_debt_ratio": 0.0,
+        "available_income": 50000.0,
+        "assessment_timestamp": "2025-12-16T12:47:21.393644",
+        "amount_to_limit_ratio": 0.2,
+        "within_pre_approved": true,
+        "within_2x_limit": true,
+        "capacity_level": "excellent",
+        "recommended_amount": 1000000.0,
+        "available_emi_capacity": 25000.0
+      },
+      "timestamp": "2025-12-16T12:47:21.394233"
+    },
+    "negotiation_stage": {
+      "value": "terms_presented",
+      "timestamp": "2025-12-16T12:47:21.394256"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_bb259014",
+    "task_6d655487"
+  ],
+  "errors": [],
+  "created_at": "2025-12-16 12:46:40.168718",
+  "updated_at": "2025-12-16 12:48:12.498005",
+  "last_updated": "2025-12-16T12:48:12.498096"
+}

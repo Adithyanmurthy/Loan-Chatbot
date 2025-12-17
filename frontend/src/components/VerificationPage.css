@@ -1,0 +1,178 @@
+.verification-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+
+.verification-header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 20px 0;
+}
+
+.verification-header .back-btn {
+  color: white !important;
+  background: rgba(255,255,255,0.15) !important;
+  border-radius: 20px !important;
+}
+
+.header-icon {
+  font-size: 32px !important;
+}
+
+.verification-content {
+  padding: 40px 16px;
+}
+
+.verification-card {
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.customer-info-bar {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.verification-stepper {
+  padding: 32px 16px;
+  background: #fafbfc;
+}
+
+.stepper-icon {
+  width: 48px !important;
+  height: 48px !important;
+  background: #e0e0e0 !important;
+  transition: all 0.3s ease;
+}
+
+.stepper-icon.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.stepper-icon.completed {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+.verification-step-content {
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.step-avatar {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 24px;
+}
+
+.step-avatar.aadhaar {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+}
+
+.step-avatar.phone {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+}
+
+.step-avatar.address {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+.step-avatar .MuiSvgIcon-root {
+  font-size: 40px;
+}
+
+.step-title {
+  font-weight: 700 !important;
+  color: #1f2937;
+  margin-bottom: 8px !important;
+}
+
+.step-desc {
+  color: #6b7280;
+  margin-bottom: 32px !important;
+}
+
+.verification-input {
+  margin-bottom: 20px !important;
+}
+
+.verification-input .MuiOutlinedInput-root {
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.verification-input input {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.demo-alert {
+  margin-bottom: 24px !important;
+  border-radius: 12px !important;
+  text-align: left;
+}
+
+.verify-btn {
+  padding: 14px 32px !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+}
+
+.verify-btn:disabled {
+  background: #e0e0e0 !important;
+  color: #9ca3af !important;
+}
+
+.resend-btn {
+  margin-top: 16px !important;
+  text-transform: none !important;
+}
+
+.error-alert {
+  margin: 0 24px 16px !important;
+  border-radius: 12px !important;
+}
+
+.all-verified {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+}
+
+.all-verified .success-icon {
+  font-size: 64px !important;
+  color: #10b981;
+  margin-bottom: 16px;
+}
+
+.all-verified h6 {
+  color: #065f46;
+  margin-bottom: 8px !important;
+}
+
+.redirect-loader {
+  margin-top: 16px;
+  color: #10b981 !important;
+}
+
+@media (max-width: 600px) {
+  .verification-step-content {
+    padding: 24px 16px;
+  }
+  
+  .step-avatar {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  
+  .step-avatar .MuiSvgIcon-root {
+    font-size: 32px;
+  }
+}

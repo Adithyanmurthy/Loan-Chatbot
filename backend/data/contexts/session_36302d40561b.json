@@ -1,0 +1,49 @@
+{
+  "session_id": "session_36302d40561b",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "completion",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-14T21:52:17.781352",
+        "customer_id": null,
+        "initial_message": null,
+        "greeting_sent": "Hello! Welcome to our personal loan service. I'm your AI assistant, and I'm here to help you find the perfect loan solution tailored to your needs. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process."
+      },
+      "timestamp": "2025-12-14T21:52:17.781352"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-14T21:52:17.783359"
+    },
+    "greeting_sent": {
+      "value": "Hello! Welcome to our personal loan service. I'm your AI assistant, and I'm here to help you find the perfect loan solution tailored to your needs. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process.",
+      "timestamp": "2025-12-14T21:52:17.783359"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-14T21:52:17.783359"
+    },
+    "initial_message": {
+      "value": null,
+      "timestamp": "2025-12-14T21:52:17.783359"
+    },
+    "conversation_completion": {
+      "value": {
+        "completion_type": "approved",
+        "summary": "Congratulations, there! Your loan of \u20b9requested amount has been approved. Your sanction letter is ready for download. Thank you for choosing our services! You can download your sanction letter using the link provided. If you have any questions, feel free to contact our support team.",
+        "completed_at": "2025-12-14T21:52:17.786355",
+        "summary_data": {
+          "loan_amount": 500000,
+          "customer_name": "Test Customer"
+        }
+      },
+      "timestamp": "2025-12-14T21:52:17.786355"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "last_updated": "2025-12-14T21:52:17.788350"
+}

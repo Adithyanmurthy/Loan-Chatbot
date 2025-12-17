@@ -1,0 +1,93 @@
+{
+  "session_id": "session_5840d0a887b2",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "information_collection",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T14:44:22.691652",
+        "customer_id": null,
+        "initial_message": "Hello, i want personal loan",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "initial_message": {
+      "value": "Hello, i want personal loan",
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "user_message": {
+      "value": "Hello, i want personal loan",
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "loan_interest",
+        "confidence": 0.8,
+        "all_intents": [
+          "loan_interest"
+        ],
+        "message_length": 27,
+        "context_stage": "initiation"
+      },
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T14:44:22.691652",
+      "timestamp": "2025-12-15T14:44:22.691652"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "initiation",
+        "to_stage": "information_collection",
+        "transition_time": "2025-12-15T14:44:22.691652",
+        "transition_data": {
+          "action": "collect_information",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Collecting basic customer information",
+            "next_stages": [
+              "sales_negotiation",
+              "error_handling"
+            ],
+            "required_data": [
+              "name",
+              "age",
+              "city",
+              "loan_amount"
+            ],
+            "timeout_minutes": 10
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T14:44:22.691652"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "created_at": "2025-12-15 14:44:22.673068",
+  "updated_at": "2025-12-15 14:44:22.691652",
+  "last_updated": "2025-12-15T14:44:22.691652"
+}

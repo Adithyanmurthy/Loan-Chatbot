@@ -1,0 +1,258 @@
+{
+  "session_id": "session_a79e123505cb",
+  "customer_id": null,
+  "current_agent": "sanction",
+  "conversation_stage": "sanction_generation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-16T11:39:03.031586",
+        "customer_id": null,
+        "initial_message": "personal loan",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-16T11:39:03.032089"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-16T11:39:03.033884"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-16T11:39:03.033898"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-16T11:39:03.033901"
+    },
+    "initial_message": {
+      "value": "personal loan",
+      "timestamp": "2025-12-16T11:39:03.033903"
+    },
+    "user_message": {
+      "value": "continue",
+      "timestamp": "2025-12-16T11:41:34.959117"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-16T11:41:34.959126"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "agreement",
+        "confidence": 0.8,
+        "all_intents": [
+          "agreement"
+        ],
+        "message_length": 8,
+        "context_stage": "underwriting"
+      },
+      "timestamp": "2025-12-16T11:41:34.959130"
+    },
+    "message_timestamp": {
+      "value": "2025-12-16T11:41:34.959065",
+      "timestamp": "2025-12-16T11:41:34.959144"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "underwriting",
+        "to_stage": "sanction_generation",
+        "transition_time": "2025-12-16T11:41:34.959371",
+        "transition_data": {
+          "action": "generate_sanction_letter",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Generating loan sanction letter",
+            "next_stages": [
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "sanction_letter_generated"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-16T11:41:34.959376"
+    },
+    "form_data": {
+      "value": {
+        "form_type": "customer_information",
+        "form_data": {
+          "full_name": "adi",
+          "age": "28",
+          "city": "indore",
+          "phone": "9191919191",
+          "loan_amount": "250000",
+          "monthly_salary": "54000",
+          "employment_type": "salaried"
+        },
+        "timestamp": "2025-12-16T06:10:05.948Z"
+      },
+      "timestamp": "2025-12-16T11:40:05.969050"
+    },
+    "shared_master_to_sales_customer_profile": {
+      "value": {
+        "value": {
+          "id": "GUEST_USER",
+          "name": "Valued Customer",
+          "age": 25,
+          "city": "Bangalore",
+          "phone": "9876543210",
+          "address": "Bangalore, Karnataka",
+          "current_loans": [],
+          "credit_score": 750,
+          "pre_approved_limit": 500000,
+          "employment_type": "salaried",
+          "salary": 50000,
+          "requested_amount": 100000
+        },
+        "source_agent": "master",
+        "target_agent": "sales",
+        "shared_at": "2025-12-16T11:40:05.977603"
+      },
+      "timestamp": "2025-12-16T11:40:05.977616"
+    },
+    "loan_options": {
+      "value": [
+        {
+          "amount": 100000,
+          "tenure": 6,
+          "interest_rate": 12.0,
+          "emi": 17254.84,
+          "total_payable": 103529.04000000001,
+          "processing_fee": 2000.0,
+          "affordability_score": 70.0,
+          "is_affordable": true,
+          "risk_level": "medium"
+        },
+        {
+          "amount": 100000,
+          "tenure": 12,
+          "interest_rate": 12.0,
+          "emi": 8884.88,
+          "total_payable": 106618.56,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        },
+        {
+          "amount": 100000,
+          "tenure": 18,
+          "interest_rate": 12.0,
+          "emi": 6098.2,
+          "total_payable": 109767.59999999999,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        }
+      ],
+      "timestamp": "2025-12-16T11:40:06.015233"
+    },
+    "capacity_assessment": {
+      "value": {
+        "customer_id": "GUEST_USER",
+        "requested_amount": 100000,
+        "pre_approved_limit": 500000.0,
+        "credit_score": 750,
+        "current_debt_ratio": 0.0,
+        "available_income": 50000.0,
+        "assessment_timestamp": "2025-12-16T11:40:06.013980",
+        "amount_to_limit_ratio": 0.2,
+        "within_pre_approved": true,
+        "within_2x_limit": true,
+        "capacity_level": "excellent",
+        "recommended_amount": 1000000.0,
+        "available_emi_capacity": 25000.0
+      },
+      "timestamp": "2025-12-16T11:40:06.015423"
+    },
+    "negotiation_stage": {
+      "value": "terms_presented",
+      "timestamp": "2025-12-16T11:40:06.015605"
+    },
+    "kyc_verified": {
+      "value": true,
+      "timestamp": "2025-12-16T11:40:39.335733"
+    },
+    "verification_score": {
+      "value": 95.0,
+      "timestamp": "2025-12-16T11:40:39.336168"
+    },
+    "verification_details": {
+      "value": {
+        "verification_successful": true,
+        "verification_score": 95.0,
+        "customer_id": "GUEST_USER",
+        "verified_fields": [
+          "name",
+          "phone",
+          "address",
+          "age",
+          "employment"
+        ],
+        "verification_details": {
+          "name_match": "Name \"Valued Customer\" verified successfully \u2705",
+          "phone_match": "Phone number verified (ending in 3210) \u2705",
+          "address_match": "Address in provided location verified \u2705",
+          "age_match": "Age 25 is within eligible range (21-65) \u2705",
+          "employment_match": "Employment type (salaried) verified \u2705",
+          "risk_assessment": "Low Risk",
+          "verification_method": "Automated KYC (Demo)"
+        },
+        "verification_steps": [
+          {
+            "name": "Name Verification",
+            "status": "verified",
+            "message": "Name \"Valued Customer\" verified successfully",
+            "score": 100
+          },
+          {
+            "name": "Phone Verification",
+            "status": "verified",
+            "message": "Phone number verified (ending in 3210)",
+            "score": 100
+          },
+          {
+            "name": "Address Verification",
+            "status": "verified",
+            "message": "Address in provided location verified",
+            "score": 100
+          },
+          {
+            "name": "Age Verification",
+            "status": "verified",
+            "message": "Age 25 is within eligible range (21-65)",
+            "score": 100
+          },
+          {
+            "name": "Employment Verification",
+            "status": "verified",
+            "message": "Employment type (salaried) verified",
+            "score": 75
+          }
+        ],
+        "next_action": "proceed_to_underwriting",
+        "message": "\u2705 **KYC Verification Successful!**\n\nYour identity has been verified with a confidence score of 95.0%.\n\n**Verified Details:**\n\u2022 Name: Valued Customer\n\u2022 Phone: XXXXXX3210\n\u2022 City: \n\nWe can now proceed with your loan application."
+      },
+      "timestamp": "2025-12-16T11:40:39.336281"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_b532627c",
+    "task_405cd20d",
+    "task_a6bb6e2f"
+  ],
+  "errors": [],
+  "created_at": "2025-12-16 11:39:03.023006",
+  "updated_at": "2025-12-16 11:41:34.959366",
+  "last_updated": "2025-12-16T11:41:34.959895"
+}

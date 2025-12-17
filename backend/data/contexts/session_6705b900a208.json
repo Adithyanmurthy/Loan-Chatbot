@@ -1,0 +1,23 @@
+{
+  "session_id": "session_6705b900a208",
+  "customer_id": null,
+  "current_agent": "master",
+  "conversation_stage": "initiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-16T11:22:12.217539",
+        "customer_id": null,
+        "initial_message": "hi",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. Whether you're looking for a personal loan or just exploring your options, I'm here to guide you through the process."
+      },
+      "timestamp": "2025-12-16T11:22:12.217548"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [],
+  "errors": [],
+  "created_at": "2025-12-16 11:22:12.210697",
+  "updated_at": "2025-12-16 11:22:12.210702",
+  "last_updated": "2025-12-16T11:22:12.217714"
+}

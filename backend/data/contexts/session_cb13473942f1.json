@@ -1,0 +1,214 @@
+{
+  "session_id": "session_cb13473942f1",
+  "customer_id": null,
+  "current_agent": "sanction",
+  "conversation_stage": "sanction_generation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-17T15:11:18.557751",
+        "customer_id": null,
+        "initial_message": "i want an loan for 200000",
+        "greeting_sent": "Hi there! Thanks for visiting us today. I'm here to make your loan application process as smooth and quick as possible. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-17T15:11:18.557788"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-17T15:11:18.560636"
+    },
+    "greeting_sent": {
+      "value": "Hi there! Thanks for visiting us today. I'm here to make your loan application process as smooth and quick as possible. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-17T15:11:18.560639"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-17T15:11:18.560642"
+    },
+    "initial_message": {
+      "value": "i want an loan for 200000",
+      "timestamp": "2025-12-17T15:11:18.560643"
+    },
+    "user_message": {
+      "value": "Yes, I agree. Please proceed with loan approval and check my eligibility.",
+      "timestamp": "2025-12-17T15:13:18.543477"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-17T15:13:18.543488"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "verification_complete",
+        "confidence": 0.95,
+        "all_intents": [
+          "verification_complete",
+          "agreement"
+        ],
+        "message_length": 73,
+        "context_stage": "underwriting"
+      },
+      "timestamp": "2025-12-17T15:13:18.543491"
+    },
+    "message_timestamp": {
+      "value": "2025-12-17T15:13:18.543406",
+      "timestamp": "2025-12-17T15:13:18.543495"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "underwriting",
+        "to_stage": "sanction_generation",
+        "transition_time": "2025-12-17T15:13:18.545140",
+        "transition_data": {
+          "action": "generate_sanction_letter",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Generating loan sanction letter",
+            "next_stages": [
+              "completion",
+              "error_handling"
+            ],
+            "required_data": [
+              "sanction_letter_generated"
+            ],
+            "timeout_minutes": 5
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-17T15:13:18.545148"
+    },
+    "form_data": {
+      "value": {
+        "form_type": "customer_information",
+        "form_data": {
+          "full_name": "Mayur",
+          "age": "31",
+          "city": "Indore",
+          "phone": "9191919191",
+          "loan_amount": "500000",
+          "monthly_salary": "73000",
+          "employment_type": "salaried"
+        },
+        "timestamp": "2025-12-17T09:42:15.904Z"
+      },
+      "timestamp": "2025-12-17T15:12:15.959732"
+    },
+    "shared_master_to_sales_customer_profile": {
+      "value": {
+        "value": {
+          "id": "GUEST_USER",
+          "name": "Mayur",
+          "age": 31,
+          "city": "Indore",
+          "phone": "9191919191",
+          "address": "Bangalore, Karnataka",
+          "current_loans": [],
+          "credit_score": 750,
+          "pre_approved_limit": 500000,
+          "employment_type": "salaried",
+          "salary": 73000,
+          "requested_amount": 500000
+        },
+        "source_agent": "master",
+        "target_agent": "sales",
+        "shared_at": "2025-12-17T15:12:15.990031"
+      },
+      "timestamp": "2025-12-17T15:12:15.990043"
+    },
+    "loan_options": {
+      "value": [
+        {
+          "amount": 500000,
+          "tenure": 18,
+          "interest_rate": 12.75,
+          "emi": 30665.51,
+          "total_payable": 551979.1799999999,
+          "processing_fee": 10000.0,
+          "affordability_score": 40.0,
+          "is_affordable": true,
+          "risk_level": "high"
+        },
+        {
+          "amount": 500000,
+          "tenure": 24,
+          "interest_rate": 12.75,
+          "emi": 23712.24,
+          "total_payable": 569093.76,
+          "processing_fee": 10000.0,
+          "affordability_score": 70.0,
+          "is_affordable": true,
+          "risk_level": "medium"
+        },
+        {
+          "amount": 500000,
+          "tenure": 36,
+          "interest_rate": 12.75,
+          "emi": 16786.83,
+          "total_payable": 604325.8800000001,
+          "processing_fee": 10000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        }
+      ],
+      "timestamp": "2025-12-17T15:12:16.039412"
+    },
+    "capacity_assessment": {
+      "value": {
+        "customer_id": "GUEST_USER",
+        "requested_amount": 500000,
+        "pre_approved_limit": 500000.0,
+        "credit_score": 750,
+        "current_debt_ratio": 0.0,
+        "available_income": 73000.0,
+        "assessment_timestamp": "2025-12-17T15:12:16.038500",
+        "amount_to_limit_ratio": 1.0,
+        "within_pre_approved": true,
+        "within_2x_limit": true,
+        "capacity_level": "excellent",
+        "recommended_amount": 1000000.0,
+        "available_emi_capacity": 36500.0
+      },
+      "timestamp": "2025-12-17T15:12:16.039519"
+    },
+    "negotiation_stage": {
+      "value": "terms_presented",
+      "timestamp": "2025-12-17T15:12:16.039560"
+    },
+    "credit_check_done": {
+      "value": true,
+      "timestamp": "2025-12-17T15:13:14.709911"
+    },
+    "credit_score": {
+      "value": 750,
+      "timestamp": "2025-12-17T15:13:14.709961"
+    },
+    "loan_approved": {
+      "value": null,
+      "timestamp": "2025-12-17T15:13:14.710043"
+    },
+    "approved_loan": {
+      "value": {
+        "amount": 500000,
+        "tenure": 60,
+        "interest_rate": 12.0,
+        "emi": 10000.0,
+        "credit_score": 750
+      },
+      "timestamp": "2025-12-17T15:13:14.710122"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_9bd2fdc6",
+    "task_ba9381df"
+  ],
+  "errors": [],
+  "created_at": "2025-12-17 15:11:18.554078",
+  "updated_at": "2025-12-17 15:13:18.545126",
+  "last_updated": "2025-12-17T15:13:18.546530"
+}

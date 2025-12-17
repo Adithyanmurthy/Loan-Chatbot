@@ -1,0 +1,176 @@
+{
+  "session_id": "session_f0e5196519b2",
+  "customer_id": null,
+  "current_agent": "sales",
+  "conversation_stage": "sales_negotiation",
+  "collected_data": {
+    "conversation_started": {
+      "value": {
+        "timestamp": "2025-12-15T15:18:02.244260",
+        "customer_id": null,
+        "initial_message": "Hello, I need a loan",
+        "greeting_sent": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs."
+      },
+      "timestamp": "2025-12-15T15:18:02.244260"
+    },
+    "conversation_initiated": {
+      "value": true,
+      "timestamp": "2025-12-15T15:18:02.245265"
+    },
+    "greeting_sent": {
+      "value": "Welcome! I'm your personal loan advisor. Let's work together to find you the best loan option that fits your requirements. I see you're interested in a personal loan. I'll be happy to help you find the best option for your needs.",
+      "timestamp": "2025-12-15T15:18:02.245265"
+    },
+    "customer_id": {
+      "value": null,
+      "timestamp": "2025-12-15T15:18:02.245265"
+    },
+    "initial_message": {
+      "value": "Hello, I need a loan",
+      "timestamp": "2025-12-15T15:18:02.245265"
+    },
+    "user_message": {
+      "value": "My name is John Doe, I am 35 years old, and I work as a Software Engineer.",
+      "timestamp": "2025-12-15T15:18:04.291592"
+    },
+    "message_type": {
+      "value": "text",
+      "timestamp": "2025-12-15T15:18:04.291592"
+    },
+    "intent_analysis": {
+      "value": {
+        "intent": "customer_details",
+        "confidence": 0.8,
+        "all_intents": [
+          "customer_details"
+        ],
+        "message_length": 74,
+        "context_stage": "information_collection"
+      },
+      "timestamp": "2025-12-15T15:18:04.291592"
+    },
+    "message_timestamp": {
+      "value": "2025-12-15T15:18:04.291592",
+      "timestamp": "2025-12-15T15:18:04.291592"
+    },
+    "stage_transition": {
+      "value": {
+        "from_stage": "information_collection",
+        "to_stage": "sales_negotiation",
+        "transition_time": "2025-12-15T15:18:04.292622",
+        "transition_data": {
+          "action": "start_sales",
+          "trigger": "user_message"
+        },
+        "preparation_result": {
+          "preparation_completed": true,
+          "target_stage_config": {
+            "description": "Negotiating loan terms and conditions",
+            "next_stages": [
+              "verification",
+              "error_handling"
+            ],
+            "required_data": [
+              "agreed_amount",
+              "agreed_tenure",
+              "agreed_rate"
+            ],
+            "timeout_minutes": 15
+          },
+          "transition_data_processed": true
+        }
+      },
+      "timestamp": "2025-12-15T15:18:04.292622"
+    },
+    "shared_master_to_sales_customer_profile": {
+      "value": {
+        "value": {
+          "id": "GUEST_USER",
+          "name": "Valued Customer",
+          "age": 25,
+          "city": "Bangalore",
+          "phone": "9876543210",
+          "address": "Bangalore, Karnataka",
+          "current_loans": [],
+          "credit_score": 750,
+          "pre_approved_limit": 500000,
+          "employment_type": "salaried",
+          "salary": 50000,
+          "requested_amount": 100000
+        },
+        "source_agent": "master",
+        "target_agent": "sales",
+        "shared_at": "2025-12-15T15:18:04.295611"
+      },
+      "timestamp": "2025-12-15T15:18:04.295611"
+    },
+    "loan_options": {
+      "value": [
+        {
+          "amount": 100000,
+          "tenure": 6,
+          "interest_rate": 12.0,
+          "emi": 17254.84,
+          "total_payable": 103529.04000000001,
+          "processing_fee": 2000.0,
+          "affordability_score": 70.0,
+          "is_affordable": true,
+          "risk_level": "medium"
+        },
+        {
+          "amount": 100000,
+          "tenure": 12,
+          "interest_rate": 12.0,
+          "emi": 8884.88,
+          "total_payable": 106618.56,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        },
+        {
+          "amount": 100000,
+          "tenure": 18,
+          "interest_rate": 12.0,
+          "emi": 6098.2,
+          "total_payable": 109767.59999999999,
+          "processing_fee": 2000.0,
+          "affordability_score": 100.0,
+          "is_affordable": true,
+          "risk_level": "low"
+        }
+      ],
+      "timestamp": "2025-12-15T15:18:04.302378"
+    },
+    "capacity_assessment": {
+      "value": {
+        "customer_id": "GUEST_USER",
+        "requested_amount": 100000,
+        "pre_approved_limit": 500000.0,
+        "credit_score": 750,
+        "current_debt_ratio": 0.0,
+        "available_income": 50000.0,
+        "assessment_timestamp": "2025-12-15T15:18:04.302378",
+        "amount_to_limit_ratio": 0.2,
+        "within_pre_approved": true,
+        "within_2x_limit": true,
+        "capacity_level": "excellent",
+        "recommended_amount": 1000000.0,
+        "available_emi_capacity": 25000.0
+      },
+      "timestamp": "2025-12-15T15:18:04.302378"
+    },
+    "negotiation_stage": {
+      "value": "terms_presented",
+      "timestamp": "2025-12-15T15:18:04.302378"
+    }
+  },
+  "pending_tasks": [],
+  "completed_tasks": [
+    "task_73b5f2a8"
+  ],
+  "errors": [],
+  "created_at": "2025-12-15 15:18:02.239628",
+  "updated_at": "2025-12-15 15:18:04.303377",
+  "last_updated": "2025-12-15T15:18:04.303377"
+}
