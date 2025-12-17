@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 import { ConversationContext, SanctionLetter } from '../types/models';
 
-// API Configuration
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// API Configuration - Use relative URL when served from same server, or env variable
+const API_BASE_URL = process.env.REACT_APP_API_URL || '';
 const API_TIMEOUT = 30000; // 30 seconds
 
 // Create axios instance with default config
