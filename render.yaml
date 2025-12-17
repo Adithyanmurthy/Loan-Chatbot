@@ -32,10 +32,8 @@ services:
       - key: OFFER_MART_API_URL
         value: https://loan-chatbot-api.onrender.com
 
-  - type: web
-    name: loan-chatbot-frontend
-    runtime: static
-    plan: free
+staticSites:
+  - name: loan-chatbot-frontend
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: build
