@@ -842,9 +842,9 @@ combinedApp.get('/offers/:userId', (req, res) => {
 const PORT = process.env.PORT || 3001;
 
 if (require.main === module) {
-    // Check if running in production (Render) - use single combined server
-    if (process.env.NODE_ENV === 'production') {
-        combinedApp.listen(PORT, () => {
+    // If PORT env is set (Render/production) OR NODE_ENV is production - use single combined server
+    if (process.env.PORT || process.env.NODE_ENV === 'production') {
+        combinedApp.listen(PORT, '0.0.0.0', () => {
             console.log(`Combined Mock APIs running on port ${PORT}`);
         });
     } else {
